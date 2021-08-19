@@ -1,11 +1,9 @@
 import React , {useState} from "react";
 import BotCard from "./BotCard"
 
-function YourBotArmy({allBots, onClickBot, onDischarge}) {
+function YourBotArmy({armyBots, onClickBot, onDischarge}) {
 
-const armyBots = allBots.filter((bot) => 
-bot.enlisted
-)
+
 // console.log(armyBots)
 
 

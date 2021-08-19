@@ -1,5 +1,3 @@
-//Code challenge begin - initiall commit
-
 import React from "react";
 import BotsPage from "./BotsPage";
 
