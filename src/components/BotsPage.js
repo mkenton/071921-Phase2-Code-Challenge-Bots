@@ -32,16 +32,15 @@ function BotsPage() {
   }
 
   function dischargeBot(botToDischarge){
-    console.log(`set bot ${botToDischarge.id} to discharged`)
-    setAllBots(allBots.map((bot) => 
-    bot.id === botToDischarge.id ? {...bot, dicharged: true} : bot
-    ).filter( bot => !bot.discharged));
+    console.log(`set bot ${botToDischarge} to discharged`);
+
+    setAllBots(allBots.filter(bot => bot.id !== botToDischarge));
   }
 
   return (
     <div>
       <YourBotArmy allBots={allBots} onClickBot={setEnlisted} onDischarge={dischargeBot}/> 
-      <BotCollection allBots={allBots} onClickBot={setEnlisted} />
+      <BotCollection allBots={allBots} onClickBot={setEnlisted} onDischarge={dischargeBot}/>
     </div>
   )
 }

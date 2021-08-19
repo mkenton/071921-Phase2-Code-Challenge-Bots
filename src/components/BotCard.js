@@ -48,7 +48,7 @@ function BotCard({ bot, onClickBot, onDischarge }) {
               <button
                 className="ui mini red button"
                 onClick={() =>
-                  onDischarge(bot)
+                  onDischarge(bot.id)
                 }
               >
                 x
